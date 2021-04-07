@@ -1,0 +1,50 @@
+.card{
+  border-radius: 25px;
+  flex: 0 0 31%;
+  &__link{
+    padding: 1.875rem 0 .8125rem; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $white-color;
+    text-decoration: none;
+    &:hover{
+      color: rgba($white-color,.85);
+    }
+  }
+  &__icon{
+    fill: currentColor;
+    width: 4.875rem;
+    height: 4.875rem;
+    margin-bottom: 1.4375rem;
+    &--stroke{
+      fill: none;
+      stroke: currentColor;
+      stroke-width:3.74px;
+    }
+  }
+  &__title{
+    text-align: center;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+  &__text{
+    font-style: italic;
+  }
+  &--primary{
+    background: $primary-color;
+  }
+  &--secondary{
+    background: $secondary-color;
+  }
+  &--disable{
+    background: $gray-color;
+  }
+  &--disable &__link{
+    pointer-events: none;
+    &:hover{
+      color: $white-color;
+    }
+  }
+}

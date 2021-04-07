@@ -1,0 +1,43 @@
+.navigation{
+  list-style: none;
+  padding-left: 0;  
+  display: flex;
+  &__item{
+    border-radius: 1.625rem;
+    background: $tertiary-color;
+    &:first-child{
+      flex: 1;
+      margin-right: 2.625rem;
+    }
+
+    &--primary{
+      background: $primary-color;
+    }
+    &--secondary{
+      background: $secondary-color;
+    }
+  }
+  &__link{
+    padding: 1rem 1.6875rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: $white-color;
+    font-weight: 700;
+    font-size: 1.25rem;
+    &:hover{
+      color: rgba($white-color,.75);
+    }
+  }
+  &__icon{
+    width: 3rem;
+    height: 3rem;
+    fill: currentColor;
+    margin-right: 1.25rem;
+    &--stroke{
+      fill: none;
+      stroke: currentColor;
+      stroke-width:3.74px;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+.main{
+  color: $black-color;
+  max-width: 860px;
+  box-sizing: border-box;
+  padding: 1.625rem 5.875rem 1.625rem 1.625rem;
+  & > * {
+    box-sizing: inherit;
+  }
+
+  &__header{
+    display: flex;
+    align-items: center;    
+    margin-bottom: 3rem;
+  }
+
+  &__row{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    &:not(:last-child){
+      margin-bottom: 1.875rem;
+    }
+    & > *:not(:last-child){
+      margin-right: 1.875rem;
+    }
+  }
+  &__grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1.875rem;    
+    justify-content: center;
+    
+    
+  }
+  &__navigation{
+    margin-bottom: 2.125rem;
+    // padding-right: 4.9375rem;
+  }
+
+  
+}
+.img{
+  max-width: 100%;
+}

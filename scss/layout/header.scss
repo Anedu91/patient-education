@@ -1,0 +1,17 @@
+.header{
+  
+
+  &__title{
+    color: $tertiary-color;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-left: 2rem;
+  }
+  &__image{
+    width: 6.15rem;
+  }
+  &__figure{
+    padding: 0 2rem;
+    border-right: 2px solid $black-color;
+  }
+}

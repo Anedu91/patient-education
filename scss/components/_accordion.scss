@@ -1,0 +1,49 @@
+.accordion{
+  width: 100%;
+  max-width: 21.25rem;
+  margin-top: 1.875rem;
+  &__item{
+    box-shadow: 0 10px 20px rgba(black,.16);
+    &:not(:last-child){
+      margin-bottom: 1.25rem;
+    }
+  }
+  &__button{
+    position: relative;
+    width: 100%;
+    padding: 1.25rem 1.5625rem;
+    border: none;
+    background: transparent;
+    text-align: left;
+    font-weight: 700;
+    font-size: 1rem;
+    font-family: inherit;
+    cursor: pointer;    
+
+    &:focus{
+      outline: none;
+    }
+    &:after{
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 1.5625rem;
+      transform: translateY(-50%);
+      width: 0; 
+      height: 0; 
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;      
+      border-top: 13px solid #707070;     
+    }
+  }
+  &__content{
+    display: none;
+    padding: 1.25rem 1.5625rem;
+    transition: all ease-out .4s .1s;
+    opacity: 0;
+  }
+  &__item.active &__content{
+    display: block;
+    opacity: 1;
+  }
+}
