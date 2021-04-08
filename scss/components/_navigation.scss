@@ -4,7 +4,7 @@
   display: flex;
   &__item{
     border-radius: 1.625rem;
-    background: $tertiary-color;
+    
     &:first-child{
       flex: 1;
       margin-right: 2.625rem;
@@ -18,6 +18,7 @@
     }
   }
   &__link{
+    border-radius: 1.625rem;
     padding: 1rem 1.6875rem;
     text-decoration: none;
     display: flex;
@@ -25,9 +26,13 @@
     color: $white-color;
     font-weight: 700;
     font-size: 1.25rem;
-    &:hover{
-      color: rgba($white-color,.75);
+    &.active{
+      background: $tertiary-color;
+      &:hover{
+        background: rgba($tertiary-color,.75);
+      }
     }
+    
   }
   &__icon{
     width: 3rem;

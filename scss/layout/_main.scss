@@ -2,7 +2,10 @@
   color: $black-color;
   max-width: 860px;
   box-sizing: border-box;
-  padding: 1.625rem 5.875rem 1.625rem 1.625rem;
+  padding: 1.625rem 2.875rem 1.625rem 1.625rem;
+  @media(min-width:760px){
+    padding: 1.625rem 5.875rem 1.625rem 1.625rem;
+  }
   & > * {
     box-sizing: inherit;
   }
@@ -17,11 +20,16 @@
     position: relative;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     &:not(:last-child){
       margin-bottom: 1.875rem;
     }
     & > *:not(:last-child){
-      margin-right: 1.875rem;
+      margin-bottom: 1.875rem;
+      @media(min-width:760px){
+        margin-right: 1.875rem;
+        margin-bottom: 0;
+      }
     }
   }
   &__grid{

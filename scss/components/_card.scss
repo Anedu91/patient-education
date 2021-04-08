@@ -1,7 +1,13 @@
 .card{
-  border-radius: 25px;
-  flex: 0 0 31%;
+  flex: 0 0 100%;
+  display: flex;
+  @media(min-width:760px){
+    flex: 0 0 30%;
+  }
+  
   &__link{
+    border-radius: 25px;
+    flex: 1;
     padding: 1.875rem 0 .8125rem; 
     display: flex;
     flex-direction: column;
@@ -9,8 +15,24 @@
     align-items: center;
     color: $white-color;
     text-decoration: none;
-    &:hover{
-      color: rgba($white-color,.85);
+    &:hover{      
+      text-decoration: underline;
+    }
+    &.primary{
+      background: $primary-color;
+      &:hover{
+        background: rgba($primary-color, .75);
+      }
+    }
+    &.secondary{
+      background: $secondary-color;
+      &:hover{
+        background: rgba($secondary-color, .75);
+      }
+    }
+    &.disable{
+      background: $gray-color;
+      pointer-events: none;
     }
   }
   &__icon{

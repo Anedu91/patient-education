@@ -3,15 +3,24 @@
 
   &__title{
     color: $tertiary-color;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 700;
     margin-left: 2rem;
+    @media(min-width: 560px){
+      font-size: 3rem;
+    }
   }
   &__image{
-    width: 6.15rem;
+    width: 4.15rem;
+    @media(min-width: 560px){
+      width: 6.15rem;
+    }
   }
   &__figure{
-    padding: 0 2rem;
+    padding: 0 1rem;
     border-right: 2px solid $black-color;
+    @media(min-width: 560px){
+      padding: 0 2rem;
+    }
   }
 }
